@@ -1,0 +1,6 @@
+.game-board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 450px; /* 9 balls per row */
+  }
+  
