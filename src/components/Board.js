@@ -24,8 +24,7 @@ function Board({ score, setScore }) {
 
     // Функция для обновления доски после каждого хода
     const updateBoard = () => {
-        // const newBoard = checkForLines(board, setScore);
-        const newBoard = generateNewBalls(board);
+        const newBoard = checkForLines(board, setScore);
         setBoard(newBoard);
     };
 
@@ -33,7 +32,7 @@ function Board({ score, setScore }) {
         alert("" + row + " " + col);
     }
 
-    return (<>
+    return (
         <div className="board">
             {board.map((row, rowIndex) =>
                 row.map((cell, colIndex) => (
@@ -45,8 +44,6 @@ function Board({ score, setScore }) {
                 ))
             )}
         </div>
-        <button onClick={() => updateBoard()}>ОБновить</button>
-    </>
     );
 }
 

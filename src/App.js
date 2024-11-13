@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Lines Game2</h1>
+      <h1>Lines Game</h1>
       <p>Score: {score}</p>
       <Board score={score} setScore={setScore} />
     </div>
