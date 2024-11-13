@@ -1,0 +1,41 @@
+/* src/animations.css */
+@keyframes ballAppear {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes ballDisappear {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0); opacity: 0; }
+  }
+  
+  @keyframes ballMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(var(--x-move), var(--y-move)); }
+  }
+  
+  .ball.appear {
+    animation: ballAppear 0.3s ease-out forwards;
+  }
+  
+  .ball.disappear {
+    animation: ballDisappear 0.3s ease-in forwards;
+  }
+  
+  .ball.move {
+    animation: ballMove 0.3s ease-in-out forwards;
+  }
+  
+  .ball {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    background-color: #1890ff;
+  }
+  
+  .ball.red { background-color: #ff4d4f; }
+  .ball.green { background-color: #52c41a; }
+  .ball.blue { background-color: #1890ff; }
+  .ball.yellow { background-color: #faad14; }
+  .ball.purple { background-color: #722ed1; }
