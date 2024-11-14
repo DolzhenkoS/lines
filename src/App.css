@@ -25,4 +25,14 @@
     position: relative;
   }
   
-  
+  /* src/App.css */
+.ball.selected {
+  box-shadow: 0 0 10px 5px rgba(255, 215, 0, 0.8);
+  animation: selectedBall 0.5s infinite alternate;
+}
+
+/* Добавим анимацию мигания */
+@keyframes selectedBall {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.2); }
+}

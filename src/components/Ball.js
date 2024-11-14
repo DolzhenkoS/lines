@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import '../animations.css';
 
-function Ball({ color, animationType }) {
+function Ball({ color, isSelected, animationType }) {
   const [animationClass, setAnimationClass] = useState('');
 
   useEffect(() => {
@@ -21,7 +21,9 @@ function Ball({ color, animationType }) {
     }
   }, [animationType]);
 
-  return <div className={`ball ${color} ${animationClass}`}></div>;
+  return (
+  <div className={`ball ${color} ${animationClass} ${isSelected ? 'selected' : ''}`}></div>)
+  // <div className={`ball ${color} ${animationClass}`}></div>;
 }
 
 export default Ball;
