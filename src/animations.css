@@ -1,41 +1,89 @@
+.ball.selected {
+  box-shadow: 0 0 10px 5px rgba(255, 215, 0, 0.8);
+  animation: selectedBall 0.5s infinite alternate;
+}
+
+/* Добавим анимацию мигания */
+@keyframes selectedBall {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
 /* src/animations.css */
 @keyframes ballAppear {
-    0% { transform: scale(0); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(0);
+    opacity: 0;
   }
-  
-  @keyframes ballDisappear {
-    0% { transform: scale(1); opacity: 1; }
-    100% { transform: scale(0); opacity: 0; }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
-  
-  @keyframes ballMove {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(var(--x-move), var(--y-move)); }
+}
+
+@keyframes ballDisappear {
+  0% {
+    transform: scale(1);
+    opacity: 1;
   }
-  
-  .ball.appear {
-    animation: ballAppear 0.3s ease-out forwards;
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
   }
-  
-  .ball.disappear {
-    animation: ballDisappear 0.3s ease-in forwards;
+}
+
+@keyframes ballMove {
+  0% {
+    transform: translate(0, 0);
   }
-  
-  .ball.move {
-    animation: ballMove 0.3s ease-in-out forwards;
+
+  100% {
+    transform: translate(var(--x-move), var(--y-move));
   }
-  
-  .ball {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-    background-color: #1890ff;
-  }
-  
-  .ball.red { background-color: #ff4d4f; }
-  .ball.green { background-color: #52c41a; }
-  .ball.blue { background-color: #1890ff; }
-  .ball.yellow { background-color: #faad14; }
-  .ball.purple { background-color: #722ed1; }
+}
+
+.ball.appear {
+  animation: ballAppear 0.3s ease-out forwards;
+}
+
+.ball.disappear {
+  animation: ballDisappear 0.3s ease-in forwards;
+}
+
+.ball.move {
+  transition: transform 0.3s ease-in-out;
+}
+
+.ball {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  background-color: #1890ff;
+}
+
+.ball.red {
+  background-color: #ff4d4f;
+}
+
+.ball.green {
+  background-color: #52c41a;
+}
+
+.ball.blue {
+  background-color: #1890ff;
+}
+
+.ball.yellow {
+  background-color: #faad14;
+}
+
+.ball.purple {
+  background-color: #722ed1;
+}

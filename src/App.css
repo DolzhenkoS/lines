@@ -1,38 +1,28 @@
 /* src/App.css */
 .App {
-    text-align: center;
-    font-family: Arial, sans-serif;
-  }
-  
-  .board {
-    display: grid;
-    grid-template-columns: repeat(9, 60px); /* Размеры сетки для игрового поля */
-    grid-template-rows: repeat(9, 60px);
-    gap: 5px;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .cell {
-    width: 60px;
-    height: 60px;
-    background-color: #d9d9d9;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  /* src/App.css */
-.ball.selected {
-  box-shadow: 0 0 10px 5px rgba(255, 215, 0, 0.8);
-  animation: selectedBall 0.5s infinite alternate;
+  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-/* Добавим анимацию мигания */
-@keyframes selectedBall {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.2); }
+.board {
+  display: grid;
+  grid-template-columns: repeat(9, 60px);
+  /* Размеры сетки для игрового поля */
+  grid-template-rows: repeat(9, 60px);
+  gap: 5px;
+  justify-content: center;
+  margin-top: 20px;
 }
+
+.cell {
+  width: 60px;
+  height: 60px;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+

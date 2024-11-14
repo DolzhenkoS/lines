@@ -59,13 +59,13 @@ export function checkForLines(board, setScore) {
     setScore(prevScore => prevScore + scoreToAdd);
   }
 
-  // Удаление шаров после анимации
+ // Удаление шаров после анимации
   setTimeout(() => {
     linesToRemove.forEach(key => {
       const [row, col] = key.split('-').map(Number);
       newBoard[row][col] = null;
     });
-  }, 300); // Таймер для завершения анимации "disappear"
+  }, 500); // Таймер для завершения анимации "disappear"
 
   return newBoard;
 }
